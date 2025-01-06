@@ -1,0 +1,434 @@
+﻿@{
+    ViewData["Title"] = "Design";
+    ViewBag.HideFooter = true;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polotno Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/polotno/polotno.css">
+</head>
+<body>
+
+    @{
+        var PaperType = Context.Session.GetString("PaperType");
+        var Size = Context.Session.GetString("Size");
+        var BookCuffColor = Context.Session.GetString("BookCuffColor");
+        var NumberOfPages = Context.Session.GetInt32("NumberOfPages");
+        var notebookName = Context.Session.GetString("NotebookName");
+        var notebookDescription = Context.Session.GetString("NotebookDescription");
+    }
+    <form id="designForm" asp-action="Choose" asp-controller="Choose" method="post">
+        <input type="hidden" name="PaperType" id="PaperType" value="@PaperType">
+        <input type="hidden" name="Size" id="Size" value="@Size">
+        <input type="hidden" name="BookCuffColor" id="BookCuffColor" value="@BookCuffColor">
+        <input type="hidden" name="NumberOfPages" id="NumberOfPages" value="@NumberOfPages">
+        <input type="hidden" name="NotebookName" id="NotebookName" value="@notebookName">
+        <input type="hidden" name="NotebookDescription" id="NotebookDescription" value="@notebookDescription">
+        <button type="button" class="btnChooseSubmit" name="action" value="add">@EXE.Resources.Resource.Add</button>
+    </form>
+    <!-- add styles -->
+    <link href="https://unpkg.com/@@blueprintjs/core@5/lib/css/blueprint.css"
+          rel="stylesheet" />
+    <!-- add polotno bundle -->
+    <!-- (!) important: make sure it is added into body of document (not <head>) -->
+    <script src="https://unpkg.com/polotno@2/polotno.bundle.js"></script>
+
+    <!-- set styles for the editor -->
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+
+    <!-- create container for editor -->
+    <div id="container"></div>
+    <!-- init the editor -->
+    <script>
+        var size = '@Size';
+        const { store } = createPolotnoApp({
+            // this is a demo key just for that project
+            // (!) please don't use it in your projects
+            // to create your own API key please go here: https://polotno.com/cabinet
+            key: 'gmPMZrZfPOfhyME5Pgf1',
+            // you can hide back-link on a paid license
+            // but it will be good if you can keep it for Polotno project support
+            showCredit: true,
+            container: document.getElementById('container'),
+            // also optionally you can specify which side panels you want to show
+            // by default all panels are shown
+            sections: ['templates', 'text', 'photos', 'elements', 'upload', 'background', 'layers']
+        });
+        const page = store.addPage();
+        store.selectPage(store.pages[0].id);
+        store.setUnit({
+            unit: 'px', // mm, cm, in, pt, px
+            dpi: 300,
+        });
+
+        if (size === 'A4') {
+            store.setSize(2480, 3508);
+        } else if (size === 'A5') {
+            store.setSize(1754, 2480);
+        } else {
+            store.setSize(2150, 3036);
+        }
+        // you can use full store API available here: https://polotno.com/docs/store-overview
+    </script>
+    <button class="save-img">View 3D</button>
+    <button class="clear-img">Clear</button>
+    <div id="imageContainer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <div class="extra-content" id="3d-view" style="display:none;">
+
+
+        <script>
+            function dataURLToBlob(dataURL) {
+                const byteString = atob(dataURL.split(',')[1]);
+                const mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
+                const ab = new ArrayBuffer(byteString.length);
+                const ia = new Uint8Array(ab);
+                for (let i = 0; i < byteString.length; i++) {
+                    ia[i] = byteString.charCodeAt(i);
+                }
+                return new Blob([ab], { type: mimeString });
+            }
+
+            async function getImageDataURL(i) {
+                const dataURL = await store.toDataURL({ pageId: store.pages[i].id });
+                return dataURL;
+            }
+            // Create a scene
+            var scene = new THREE.Scene();
+            var group = new THREE.Group();
+            let isDragging = false;
+            let previousMousePosition = {
+                x: 0,
+                y: 0
+            };
+            let windowHalfX = window.innerWidth / 2;
+            let windowHalfY = window.innerHeight / 2;
+            const parentElement = document.getElementById('3d-view');
+
+            function isMouseIn3DView(event) {
+                const rect = parentElement.getBoundingClientRect();
+                return (
+                    event.clientX >= rect.left &&
+                    event.clientX <= rect.right &&
+                    event.clientY >= rect.top &&
+                    event.clientY <= rect.bottom
+                );
+            }
+            function disableScroll() {
+                document.body.style.overflow = 'hidden';
+            }
+
+            function enableScroll() {
+                document.body.style.overflow = 'auto';
+            }
+
+            async function init3DScene() {
+                // Xóa các đối tượng hiện tại khỏi scene (nếu có)
+                while (scene.children.length > 0) {
+                    scene.remove(scene.children[0]);
+                }
+                // Xóa tất cả các phần tử con
+                while (parentElement.firstChild) {
+                    parentElement.removeChild(parentElement.firstChild);
+                }
+                //clear group
+                group.clear();
+
+                // Create a camera
+                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                camera.position.z = 5;
+
+                // Create a renderer
+                const renderer = new THREE.WebGLRenderer();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                parentElement.appendChild(renderer.domElement);
+
+                // Create a cube geometry
+                const x = store.height / store.width;
+                const geometry = new THREE.BoxGeometry(3, 3 * x, 0.2);
+
+                const data1 = await getImageDataURL(0);
+                const data2 = await getImageDataURL(1);
+
+                const textureLoader = new THREE.TextureLoader();
+                const frontTexture = textureLoader.load(data1);
+                const backTexture = textureLoader.load(data2);
+
+                // Set the center of rotation to the middle of the texture
+                backTexture.center.set(0.5, 0.5);
+
+                // Rotate the texture 180 degrees (π radians)
+                // backTexture.rotation = Math.PI;
+
+                const frontMaterial = new THREE.MeshBasicMaterial({ map: frontTexture });
+                const backMaterial = new THREE.MeshBasicMaterial({ map: backTexture });
+                const sideMaterial = new THREE.MeshBasicMaterial({ color: 0xCCCCCC });
+
+                const materials = [
+                    sideMaterial, // Right side
+                    sideMaterial, // Left side
+                    sideMaterial, // Front side
+                    sideMaterial, // Back side
+                    frontMaterial, // Top side
+                    backMaterial // Bottom side
+                ];
+
+                // Create a cube mesh with geometry and materials
+                const cube = new THREE.Mesh(geometry, materials);
+
+                // Create torus geometry for rings
+                const ringGeometry = new THREE.TorusGeometry(0.2, 0.03, 16, 100);
+
+
+                const color = '@BookCuffColor';
+
+                let ringMaterial;
+                if (color === 'Black') {
+                    ringMaterial = new THREE.MeshBasicMaterial({ color: 0x000000 });
+                } else {
+                    ringMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+                }
+
+
+                // Tạo geometry và material cho các hình tròn màu trắng
+                const circleGeometry = new THREE.CircleGeometry(0.07, 32); // Radius 0.2, 32 segments
+                const circleMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+
+
+
+
+                // Add rings to the group
+                const numRings = 20;
+                const ringSpacing = (3 * x) / (numRings);
+                const offset = -(numRings - 1) * ringSpacing / 2;
+
+                const holes = [];
+
+                for (let i = 0; i < numRings; i++) {
+                    const ring = new THREE.Mesh(ringGeometry, ringMaterial);
+                    ring.position.set(-1.6 + 0.1, offset + i * ringSpacing, 0); // Thụt qua phải một nửa chiều đường kính
+                    ring.rotation.x = Math.PI / 2;
+                    group.add(ring);
+
+                    // const holeGeometry = new THREE.CylinderGeometry(0.2, 0.2, 0.2, 32);
+                    // const holeMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 }); // Material để kiểm tra
+                    // const hole = new THREE.Mesh(holeGeometry, holeMaterial);
+
+                    // // Định vị từng lỗ khác nhau
+                    // hole.rotation.x = Math.PI / 2; // Xoay 90 độ để phù hợp với hướng Z
+                    // hole.position.set(-1.6 + 0.29, offset + i * ringSpacing, 0); // Đặt vị trí lỗ, điều chỉnh theo nhu cầu của bạn
+
+                    // holes.push(hole);
+
+                    // Thêm hình tròn màu trắng tại cùng vị trí với hình torus
+                    const circle = new THREE.Mesh(circleGeometry, circleMaterial);
+                    circle.position.set(-1.6 + 0.29, offset + i * ringSpacing, 0.101);
+                    group.add(circle);
+
+                    const circle1 = new THREE.Mesh(circleGeometry, circleMaterial);
+                    circle1.position.set(-1.6 + 0.29, offset + i * ringSpacing, -0.101);
+                    circle1.rotation.x = Math.PI;
+                    group.add(circle1);
+                }
+                // const csgPrimaryCube = new ThreeBSP(cube);
+                //  holes.forEach(hole => {
+                //      const csgSecondaryCube = new ThreeBSP(hole);
+                //      const subtraction = csgPrimaryCube.subtract(csgSecondaryCube);
+                //      //subtract
+                //  });
+                //  const subtractionMesh = subtraction.toMesh();
+                //  subtractionMesh.material = cube.material;
+                //  group.add(subtractionMesh);
+
+                group.add(cube);
+
+
+                //line of notebook
+
+                const a = 3 / 10;
+                const lineGeometry = new THREE.BufferGeometry();
+                const lineGeometry1 = new THREE.BufferGeometry();
+                const vertices = new Float32Array([
+                    -1.5 + a, -1.5 * x, 0.11, // Điểm đầu
+                    -1.5 + a, 1.5 * x, 0.11 // Điểm cuối
+                ]);
+                const vertices1 = new Float32Array([
+                    -1.5 + a, -1.5 * x, -0.11, // Điểm đầu
+                    -1.5 + a, 1.5 * x, -0.11 // Điểm cuối
+                ]);
+
+                lineGeometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
+                lineGeometry1.setAttribute('position', new THREE.BufferAttribute(vertices1, 3));
+
+                const lineMaterial = new THREE.LineBasicMaterial({ color: 0xCCCCCC }); // mau xam
+
+                // Tạo đối tượng đường thẳng
+                const line = new THREE.Line(lineGeometry, lineMaterial);
+                const line1 = new THREE.Line(lineGeometry1, lineMaterial);
+                group.add(line);
+                group.add(line1);
+
+                scene.add(group);
+
+                // Change background color
+                scene.background = new THREE.Color(0.2, 0.2, 0.2);
+
+                function onWindowResize() {
+                    windowHalfX = window.innerWidth / 2;
+                    windowHalfY = window.innerHeight / 2;
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                }
+
+                window.addEventListener('resize', onWindowResize, false);
+
+                function onMouseDown(event) {
+                    if (isMouseIn3DView(event)) {
+                        isDragging = true;
+                        previousMousePosition = {
+                            x: event.clientX,
+                            y: event.clientY
+                        };
+                    }
+                }
+
+                document.addEventListener('mousedown', onMouseDown, false);
+
+                function onMouseUp() {
+                    isDragging = false;
+                }
+
+                document.addEventListener('mouseup', onMouseUp, false);
+
+                function onMouseMove(event) {
+                    if (!isDragging || !isMouseIn3DView(event)) return;
+
+                    const deltaMove = {
+                        x: event.clientX - previousMousePosition.x,
+                        y: event.clientY - previousMousePosition.y
+                    };
+
+                    const deltaRotationQuaternion = new THREE.Quaternion()
+                        .setFromEuler(new THREE.Euler(
+                            toRadians(deltaMove.y * 0.5),
+                            toRadians(deltaMove.x * 0.5),
+                            0,
+                            'XYZ'
+                        ));
+
+                    group.quaternion.multiplyQuaternions(deltaRotationQuaternion, group.quaternion);
+                    previousMousePosition = {
+                        x: event.clientX,
+                        y: event.clientY
+                    };
+                }
+
+                document.addEventListener('mousemove', onMouseMove, false);
+
+                function onMouseWheel(event) {
+                    if (isMouseIn3DView(event)) {
+                        camera.position.z += event.deltaY * 0.1;
+                    }
+                }
+
+                document.addEventListener('wheel', onMouseWheel, false);
+
+                function toRadians(degrees) {
+                    return degrees * (Math.PI / 180);
+                }
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    renderer.render(scene, camera);
+                }
+
+                animate();
+            }
+
+            // Update textures and show 3D view
+            document.getElementById('3d-view').style.display = 'block';
+
+            document.querySelector('.save-img').addEventListener('click', () => {
+                init3DScene();
+            });
+
+            function clear() {
+                while (scene.children.length > 0) {
+                    scene.remove(scene.children[0]);
+                }
+            }
+
+            document.querySelector('.clear-img').addEventListener('click', () => {
+                clear();
+            });
+
+            parentElement.addEventListener('mouseenter', disableScroll);
+            parentElement.addEventListener('mouseleave', enableScroll);
+
+            async function sendImagetoo(file, inputId, imageType) {
+                const formData = new FormData();
+                formData.append('image', file);
+                formData.append('imageType', imageType); // Send image type with file
+
+                let endpoint = '/Choose/UploadFrontImages';
+                if (imageType === 'back') {
+                    endpoint = '/Choose/UploadBackImages';
+                }
+
+                try {
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        body: formData,
+                    });
+
+                    if (!response.ok) {
+                        throw new Error('Failed to upload images.');
+                    }
+
+                    const data = await response.json(); // Parse response JSON
+
+                    if (imageType === 'front') {
+                        const file1 = dataURLToBlob(await getImageDataURL(1));
+                        sendImagetoo(file1, 'ImageBackPath', 'back');
+                        // Handle file1 as needed, e.g., upload it or process it
+                    } else {
+                        document.querySelector('form').submit();
+                    }
+
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('Failed to upload images.');
+                }
+            }
+
+            async function sendImage() {
+                const file = dataURLToBlob(await getImageDataURL(0));
+                await sendImagetoo(file, 'ImageFrontPath', 'front');
+
+            }
+
+            document.querySelector('.btnChooseSubmit').addEventListener('click', () => {
+
+                sendImage();
+
+            });
+
+        </script>
+    </div>
+</body>
+</html>

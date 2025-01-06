@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Register Page";
+}
+<form asp-controller="Register" asp-action="Index" method="post">
+    <div class="contentLogin container-fluid">
+        <div class="container containerForm backgroundLogin">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <img class="imgLogin" src="/image/Login.png" alt="Ảnh mẫu" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="row loginForm">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <h1>Gimme Store</h1>
+                            <p class="pAccount">Gmail</p>
+                            <input class="ipText"
+                                   name="gmail"
+                                   type="text" />
+                            <p class="pAccount">@EXE.Resources.Resource.Username</p>
+                            <input class="ipText"
+                                   name="username"
+                                   type="text" />
+                            <p class="pAccount">@EXE.Resources.Resource.Password</p>
+                            <input class="ipText"
+                                   name="password"
+                                   type="password" />
+                            <button class="btnSubmit">@EXE.Resources.Resource.Register</button>
+                            <p class="createAccount">
+                                @EXE.Resources.Resource.Doyou <a asp-action="Index" asp-controller="Login">@EXE.Resources.Resource.LogIn</a>
+                            </p>
+                            <p class="createAccount">
+                                <a asp-action="Forgot" asp-controller="Login">@EXE.Resources.Resource.Forgot</a>
+                            </p>
+
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
