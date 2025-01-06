@@ -1,0 +1,88 @@
+﻿<div class="container" style="margin-bottom: 350px;">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="row rowFormAddress col-lg-6">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <form class="formAddress" method="post" asp-action="Address" asp-controller="Cart">
+                    <h1>@EXE.Resources.Resource.AddressShip</h1>
+                        <!-- == -->
+
+
+                    <p>@EXE.Resources.Resource.City</p>
+                        <select class="selectAddress" id="city" name="city">
+                            <option value="">@EXE.Resources.Resource.City</option>
+                        </select>
+                        <!-- == -->
+                    <p>@EXE.Resources.Resource.District</p>
+                        <select class="selectAddress" id="district" name="district">
+                        <option value="">@EXE.Resources.Resource.District</option>
+                        </select>
+                        <!-- == -->
+                    <p>@EXE.Resources.Resource.Ward</p>
+                        <select class="selectAddress" id="ward" name="ward">
+                        <option value="">@EXE.Resources.Resource.Ward</option>
+                        </select>
+                        <!-- == -->
+                    <p>@EXE.Resources.Resource.Road</p>
+                        <input class="ipAddress" name="numberAddress" type="text>
+                        <!-- == -->
+                        <p>@EXE.Resources.Resource.Note</p>
+                        <input class="ipAddress" name="note" type="text">
+
+                        <div class="addressBtn">
+                        <button type="submit" class="btnAddress">@EXE.Resources.Resource.Confirm</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-2"></div>
+
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script>
+    var citis = document.getElementById("city");
+    var districts = document.getElementById("district");
+    var wards = document.getElementById("ward");
+    var Parameter = {
+        url: "https://raw.githubusercontent.com/kenzouno1/DiaGioiHanhChinhVN/master/data.json",
+        method: "GET",
+        responseType: "application/json",
+    };
+    var promise = axios(Parameter);
+    promise.then(function (result) {
+        renderCity(result.data);
+    });
+
+    function renderCity(data) {
+        for (const x of data) {
+            citis.options[citis.options.length] = new Option(x.Name, x.Name); // Sử dụng tên thay vì ID
+        }
+        citis.onchange = function () {
+            districts.length = 1;
+            wards.length = 1;
+            if (this.value != "") {
+                const result = data.filter(n => n.Name === this.value); // Lọc theo tên
+
+                for (const k of result[0].Districts) {
+                    districts.options[districts.options.length] = new Option(k.Name, k.Name); // Sử dụng tên thay vì ID
+                }
+            }
+        };
+        districts.onchange = function () {
+            wards.length = 1;
+            const dataCity = data.filter((n) => n.Name === citis.value); // Lọc theo tên
+            if (this.value != "") {
+                const dataWards = dataCity[0].Districts.filter(n => n.Name === this.value)[0].Wards; // Lọc theo tên
+
+                for (const w of dataWards) {
+                    wards.options[wards.options.length] = new Option(w.Name, w.Name); // Sử dụng tên thay vì ID
+                }
+            }
+        };
+    }
+
+    </script>

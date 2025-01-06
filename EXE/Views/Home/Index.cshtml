@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Gimme Store";
+}
+<div class="content container-fluid">
+    <div class="left-aligned">
+    <p class="slogan1">Design</p>
+    <p class="slogan2">Your Style</p>
+    <button class="btn_start"><a asp-action="Index" asp-controller="Choose">@EXE.Resources.Resource.Start!</a></button>
+    </div>
+    <div class="cardList">
+        <div class="card">
+            <div class="cardTittle">
+                <i class="uil uil-heart"></i>
+                <h5>@EXE.Resources.Resource.Material</h5>
+                <p>@EXE.Resources.Resource.Material_content</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardTittle">
+                <i class="uil uil-star"></i>
+                <h5>@EXE.Resources.Resource.Creative</h5>
+                <p>@EXE.Resources.Resource.Creative_content</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardTittle">
+                <i class="uil uil-eye"></i>
+                <h5>@EXE.Resources.Resource.Product_home</h5>
+                <p>@EXE.Resources.Resource.Product_content</p>
+            </div>
+        </div>
+    </div>
+</div>

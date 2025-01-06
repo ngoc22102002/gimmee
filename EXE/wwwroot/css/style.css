@@ -1,0 +1,750 @@
+﻿:root {
+    --pink1: #F8E8EE;
+    --pink2: #FDCEDF;
+    --pink3: #FF90BC;
+    --pink4: #FF005D;
+    --background: #f3c6c9;
+}
+
+footer {
+    bottom: 0;
+
+}
+.navbar-home {
+    background: linear-gradient(to right, #f3c6c9, #f7f7f7);
+}
+.footer-home {
+    background: linear-gradient(to right, #f3c6c9, #f7f7f7);
+}
+
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('/fonts/Kanit/Kanit-Regular.ttf') format('truetype'), url('/fonts/Kanit/Kanit-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DMSeriText';
+    src: url('/fonts/DM_Serif_Text/DMSerifText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Abril_Fatface';
+    src: url('/fonts/Abril_Fatface/AbrilFatface-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Quicksand';
+    src: url('/fonts/Quicksand/Quicksand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    .navbar {
+        font-family: Quicksand;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--pink3);
+    color: #ffffff;
+}
+
+.header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    .header ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+.iconSocial {
+    width: 30px;
+    margin-right: 20px;
+}
+.header a {
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+}
+
+.header button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+.imgLanguage {
+    width: 25px;
+}
+.header ul li:last-child {
+    margin-right: 0;
+}
+
+.header button {
+    margin-left: 10px;
+}
+.btnCart {
+    color: #ffffff;
+    background-color: var(--pink2);
+    border: 1px solid #000000;
+    border-radius: 3px;
+    width: 30px;
+    transition: transform 0.5s;
+    margin-bottom: 5px;
+}
+.btnCart:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--pink4);
+}
+
+.header button:last-child {
+    background-color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    transition: transform 0.5s;
+}
+
+.header button:last-child:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--pink4);
+}
+
+    .header button:nth-child(4) {
+        background-color: var(--pink2);
+        padding: 2px 10px;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        transition: transform 0.5s;
+    }
+
+        .header button:nth-child(4):hover {
+            transform: scale(1.1);
+            border: 1px solid var(--pink4);
+        }
+
+.navbar {
+    border-width: 0px 0px 1px 0px; /* Bạn muốn có độ dày ở dưới và bên phải */
+    border-style: solid;
+    border-color: #ffffff; /* Màu trắng */
+}
+
+.header .imgHeader {
+    width: 50%;
+}
+
+
+/*===============================HOME PAGE===============================*/
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    background-image: url(../image/background.png) !important; 
+    background-size: cover; /* Ensure the background covers the entire area */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    text-align: left;
+    padding: 50px 20px;
+}
+
+.left-aligned {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+.slogan1, .slogan2 {
+    font-size: 7em; /* Điều chỉnh kích thước để phù hợp với laptop */
+    font-family: 'Abril_Fatface';
+    margin: 10px 0;
+    font-weight: 500;
+}
+.btn_start a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.btn_start {
+    margin: 20px 0;
+    color: #ffffff;
+    background-color: var(--pink3);
+    border: 1px solid #ffffff;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: transform 0.5s;
+    font-size: 1.1em;
+}
+
+    .btn_start:hover {
+        transform: scale(1.1);
+        border: 1px solid #000000;
+        background-color: var(--pink4);
+    }
+
+.cardList {
+    font-family: Quicksand;
+    background-color: transparent;
+    padding-left: 100px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 350px;
+    height: 230px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 10, 10, 0.5);
+    text-align: center;
+}
+
+.cardTittle {
+    margin: 20px 0;
+}
+
+    .cardTittle i {
+        color: var(--pink3);
+        font-size: 1.5em;
+    }
+
+.footer {
+    background-color: var(--pink3);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+/*======================================LOGIN PAGE==============================*/
+.contentLogin {
+    font-family: Quicksand;
+    height: 880px;
+    background-color: var(--pink1);
+}
+
+.backgroundLogin {
+    background-color: #ffffff;
+}
+
+.loginForm {
+    text-align: center;
+    margin: 100px 0px 100px 0px;
+}
+
+    .loginForm h1 {
+        margin: 0px 0px 50px 0px;
+        font-family:Abril_Fatface ;
+    }
+
+    .loginForm .pAccount {
+        font-weight: 600;
+        width: 100%;
+        text-align: left !important;
+        margin: 20px 0px 0px 0px;
+    }
+
+input {
+    width: 100%;
+    padding: 8px 0px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(176, 186, 195, 0.4);
+}
+
+    input:placeholder-shown {
+        padding-left: 20px;
+    }
+
+.btnSubmit {
+    margin: 50px 0px 20px 0px;
+    padding: 5px 75px;
+    background-color: var(--pink3);
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    color: #ffffff;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-weight: 600;
+}
+
+    .btnSubmit:hover {
+        transform: scale(1.1);
+        border: 1px solid var(--pink4);
+    }
+
+.createAccount a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--pink4);
+}
+
+    .createAccount a:hover {
+        color: blue;
+    }
+
+
+    .btnLoginAPI button {
+        width: 48%;
+        display: flex;
+        border-radius: 0px 15px 15px 0px;
+        background-color: #ffffff;
+        border: 1px solid grey;
+        font-size: 0.7em;
+        transition: transform 0.5s;
+    }
+
+        .btnLoginAPI button:hover {
+            transform: scale(1.1);
+        }
+
+.imgLogin {
+    width: 90%;
+    height: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.containerForm {
+    top: 15%;
+    width: 50%;
+    left: 25%;
+    position: absolute;
+    box-shadow: 5px 5px 10px 0px rgba(0, 10, 10, 0.5);
+    border-radius: 20px;
+}
+
+/*====================================== CHOOSE ITEM =============================================*/
+
+/* CSS cho overlay */
+.overlay {
+    position: fixed; /* Đặt overlay ở vị trí cố định */
+    top: 0;
+    left: 0;
+    width: 100%; /* Bao phủ toàn bộ chiều rộng */
+    height: 100%; /* Bao phủ toàn bộ chiều cao */
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền với độ mờ */
+    display: none; /* Ẩn overlay ban đầu */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    z-index: 999; /* Đặt z-index cao để phủ lên tất cả các phần tử khác */
+}
+
+.popup-alert {
+    width: 300px;
+    height: 150px;
+    background-color: var(--pink3);
+    text-align: center;
+    border: 2px solid var(--pink4);
+    border-radius: 20px;
+    z-index: 1000; /* Đặt z-index cao hơn overlay */
+    position: relative; /* Đặt position relative để căn giữa chính xác */
+}
+
+    .popup-alert p {
+        margin-top: 20px;
+    }
+
+    .popup-alert .btnPopup {
+        border: none;
+        border-radius: 20px;
+        background-color: var(--pink4);
+        color: #ffffff;
+        padding: 5px 10px;
+        transition: transform 0.5s;
+    }
+
+        .popup-alert .btnPopup:hover {
+            transform: scale(1.1);
+            border: 1px solid #ffffff;
+        }
+
+#designForm {
+    font-family: Quicksand;
+    font-weight: 600;
+    padding-bottom: 180px !important; 
+}
+.ChooseItem {
+    margin-top: 30px;
+}
+
+.imgDemo {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.paper {
+    text-align: left !important;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.paperDesign {
+    text-align: center !important;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+.btnChoose {
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--pink3);
+    color: #ffffff;
+    font-size: 1.1em;
+    border: none;
+    transition: transform 0.5s;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+    .btnChoose:hover {
+        transform: scale(1.1);
+    }
+
+    .btnChoose.active {
+        background-color: #FF005D;
+    }
+    .btnChoose a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .submit {
+        text-align: center;
+    }
+
+.btnChooseSubmit {
+    margin-top: 30px;
+    width: 150px;
+    background-color: var(--pink3);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1em;
+    border: none;
+    transition: transform 0.5s;
+    border-radius: 15px;
+}
+
+    .btnChooseSubmit:hover {
+        transform: scale(1.1);
+        background-color: var(--pink4);
+    }
+
+    .btnChooseSubmit a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .popup {
+        display: none;
+        width: 200px;
+        position: absolute;
+        background-color: #ffffff;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+.popup-content {
+    width: 100%;
+    height: 100%;
+}
+
+.popup.show {
+    display: block;
+}
+
+.popupImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.row5, .row6 {
+    text-align: center;
+}
+.paper {
+    text-align: center;
+}
+.inputChoose {
+    font-size: 1em;
+    width: 100%;
+    padding: 8px 0px;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+    background-color: rgba(176, 186, 195, 0.4);
+}
+
+    .inputChoose:placeholder-shown {
+        padding-left: 20px;
+    }
+/*========================================== PAYMENT ======================================*/
+
+.btnReturn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.btnReturn span {
+    font-size: 1.2em;
+}
+
+.product-card {
+    width: 100%;
+    height: 75px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px rgba(253, 206, 223, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.productimg {
+    height: 75px;
+}
+
+.product-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px; /* Adjust or remove this if necessary */
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: auto; /* This ensures the product-info takes up all available space */
+}
+
+.product-detail,
+.product-name {
+    margin: 0;
+    padding: 0;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+    .product-price p {
+        margin: 0 5px;
+    }
+
+.number {
+    font-weight: 800;
+}
+
+.more {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btnMore {
+    border: none;
+    background-color: var(--pink3);
+    color: #ffffff;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: transform 0.5s;
+}
+
+    .btnMore:hover {
+        transform: scale(1.1);
+        background-color: var(--pink4);
+    }
+
+.addressTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    border: none;
+}
+
+    .addressTitle p a {
+        color: grey;
+    }
+
+    .addressTitle h5 a {
+        color: #000000;
+    }
+
+    .addressTitle h5, .addressTitle p {
+        margin: 0;
+    }
+
+    .addressTitle a {
+        text-decoration: none;
+        color: #007bff;
+    }
+
+.form-check-input {
+    border-color: var(--pink3);
+}
+
+    .form-check-input:checked {
+        background-color: var(--pink4);
+        border-color: var(--pink3);
+    }
+
+.payBtn {
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.btnPay {
+    padding: 5px 20px;
+    background-color: var(--pink3);
+    color: #ffffff;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    margin-top: 50px;
+    position: absolute;
+    margin-bottom: 50px;
+}
+
+    .btnPay:hover {
+        transform: scale(1.1);
+    }
+.backSpace a {
+    text-decoration: none;
+    color: #000000;
+}
+.btnInputAddress {
+    margin-top: 5px;
+    cursor: pointer;
+    background-color: var(--pink3);
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.2em;
+    border: none;
+    transition: transform 0.5s;
+    border-radius: 15px
+}
+    .btnInputAddress:hover {
+        transform: scale(1.1);
+    }
+    .btnInputAddress a{
+        text-decoration: none;
+        color: #ffffff;
+    }
+.rowCart {
+    min-height: 550px;
+}
+
+/*==================================== DEMO3D ================================*/
+.modelviewer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+/*===================================== address ======================================*/
+.rowFormAddress {
+    box-shadow: 5px 5px 10px 0px rgba(253, 206, 223, 0.5);
+    border-radius: 20px;
+    margin-top: 100px;
+}
+
+.formAddress h1 {
+    text-align: center;
+}
+
+.ipAddress {
+    width: 100%;
+    border-radius: 0px 10px 10px 0px;
+    padding: 5px 0px 5px 10px;
+    background-color: rgb(243, 243, 243);
+    border: none;
+    transition: border-color 0.8s;
+}
+
+    .ipAddress:focus {
+        border: 2px solid var(--pink1);
+        border-color: var(--pink2);
+        outline: none;
+    }
+
+.formAddress p {
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.btnAddress {
+    padding: 5px 20px;
+    background-color: var(--pink3);
+    color: #ffffff;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    text-align: center;
+}
+
+    .btnAddress:hover {
+        transform: scale(1.1);
+    }
+
+.addressBtn {
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 40px;
+}
+
+.selectAddress {
+    width: 100%;
+    border-radius: 0px 10px 10px 0px;
+    padding: 5px 0px 5px 10px;
+    background-color: rgb(243, 243, 243);
+    border: none;
+    transition: border-color 0.8s;
+}
+
+    .selectAddress:focus {
+        border: 2px solid var(--pink1);
+        border-color: var(--pink2);
+        outline: none;
+    }
+
+/*    ============================== CHANGE PASSWORD =============================*/
+.alertChangePassword {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+    color: red;
+    display: none;
+}

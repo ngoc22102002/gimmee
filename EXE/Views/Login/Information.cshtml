@@ -1,0 +1,30 @@
+﻿
+<div style="margin-bottom: 260px;" class="row">
+    <div class="col-lg-3"></div>
+    <div class="row rowFormAddress col-lg-6">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+<form style="" class="formAddress" method="post">
+                <h1>@EXE.Resources.Resource.TTCN</h1>
+    <!-- == -->
+                <p>@EXE.Resources.Resource.Username</p>
+    <input class="ipAddress" name="username" type="text" value="@TempData["UserUsername"]" readonly>
+                <p>@EXE.Resources.Resource.Password</p>
+    <input class="ipAddress" name="password" type="password" value="@TempData["UserPassword"]">
+    <!-- == -->
+    <p>Gmail</p>
+    <input class="ipAddress" name="gmail" type="text" value="@TempData["UserGmail"]">
+
+                <div class="addressBtn">
+                    <button class="btnAddress" formaction="/ChangePassword/Index">@EXE.Resources.Resource.changePassword</button>
+                </div>
+    <div class="addressBtn">
+                    <button class="btnAddress" formaction="/ChangeInformation/Index">@EXE.Resources.Resource.Confirm</button>
+    </div>
+</form>
+        </div>
+        <div class="col-lg-2"></div>
+
+    </div>
+    <div class="col-lg-3"></div>
+</div>

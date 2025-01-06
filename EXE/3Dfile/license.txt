@@ -1,0 +1,11 @@
+Model Information:
+* title:	Notebook from Poly by Google
+* source:	https://sketchfab.com/3d-models/notebook-from-poly-by-google-6421833fd4304b86ad8cd4d4e3745d8b
+* author:	IronEqual (https://sketchfab.com/ie-niels)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Notebook from Poly by Google" (https://sketchfab.com/3d-models/notebook-from-poly-by-google-6421833fd4304b86ad8cd4d4e3745d8b) by IronEqual (https://sketchfab.com/ie-niels) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

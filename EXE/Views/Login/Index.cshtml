@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Login Page";
+    var loginStatus = TempData["LoginStatus"] as string;
+}
+<form asp-controller="Login" asp-action="Login" method="post">
+    <div class="contentLogin container-fluid">
+        <div class="container containerForm backgroundLogin">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <img class="imgLogin" src="/image/Login.png" alt="Ảnh mẫu" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="row loginForm">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <h1>Gimme Store</h1>
+                            <p class="pAccount">@EXE.Resources.Resource.Username</p>
+                            <input class="ipAddress" id="statusLogin" type="hidden" value="@loginStatus">
+                            <input name="UserName" type="text" />
+                            <p class="alertChangePassword" id="alertLogin1">@EXE.Resources.Resource.IncorrectLogin</p>
+                            <p class="pAccount">@EXE.Resources.Resource.Password</p>
+                            <input name="Password" type="password" />
+                            <p class="alertChangePassword" id="alertLogin2">@EXE.Resources.Resource.IncorrectLogin</p>
+                            <button class="btnSubmit">@EXE.Resources.Resource.LogIn</button>
+                            <p class="createAccount">
+                                @EXE.Resources.Resource.Doyou <a asp-action="Index" asp-controller="Register">@EXE.Resources.Resource.Register</a>
+                            </p>
+                            <p class="createAccount">
+                                <a asp-controller="" asp-action="">@EXE.Resources.Resource.Forgot</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    var alertLogin1 = document.getElementById("alertLogin1");
+    var alertLogin2 = document.getElementById("alertLogin2");
+    var statusLogin = document.getElementById("statusLogin");
+    var statusLoginValue = statusLogin.value;
+    if (statusLoginValue == "LoginFailed") {
+        alertLogin1.style.display = "block";
+        alertLogin2.style.display = "block";
+    } else {
+        alertLogin1.style.display = "none";
+        alertLogin2.style.display = "none";
+    }
+</script>

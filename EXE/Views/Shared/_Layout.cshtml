@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <link rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar @ViewBag.NavbarColor">
+            <div class="header container-fluid">
+                <ul>
+                    <a asp-controller="Home" asp-action="Index"><img class="imgHeader" src="~/image/Logo.png" alt="Logo" /></a>
+                </ul>
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Index">@EXE.Resources.Resource.HomePage</a></li>
+                    <li><a href="#">@EXE.Resources.Resource.Service</a></li>
+                    <a href="https://www.instagram.com/gimme.store.dn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                        <img class="iconSocial" src="~/image/ins.png" alt="Logo" />
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61559886992965" target="_blank" rel="noopener noreferrer">
+                        <img class="iconSocial" src="~/image/face.png" alt="Logo" />
+                    </a>
+                </ul>
+                <ul>
+                    @{
+                        var userSession = Context.Session.GetString("UserSessionUsername");
+                        if (!string.IsNullOrEmpty(userSession))
+                        {
+                            <button><a asp-action="ChangeLanguage" asp-controller="Home" asp-route-lang="vn"><img class="imgLanguage" src="~/image/VN.png"></img></a></button>
+                            <button><a asp-action="ChangeLanguage" asp-controller="Home" asp-route-lang="en"><img class="imgLanguage" src="~/image/UM.png"></img></a></button>
+                            <button><a asp-action="Index" asp-controller="Cart" asp-route-lang="vn"><img class="imgLanguage btnCart" src="~/image/cart.png"></img></a></button>
+                            <button><a class="btn1" asp-controller="ChangeInformation" asp-action="Index">@EXE.Resources.Resource.Hello, @userSession</a></button>
+                            <button><a class="btn2" asp-controller="Login" asp-action="Logout">@EXE.Resources.Resource.LogOut</a></button>
+                        }
+                        else
+                        {
+                            <button><a asp-action="ChangeLanguage" asp-controller="Home" asp-route-lang="vn"><img class="imgLanguage" src="~/image/VN.png"></img></a></button>
+                            <button><a asp-action="ChangeLanguage" asp-controller="Home" asp-route-lang="en"><img class="imgLanguage" src="~/image/UM.png"></img></a></button>
+                            <button style="display: none;"><a asp-action="Index" asp-controller="Cart" asp-route-lang="vn"><img class="imgLanguage btnCart" src="~/image/cart.png"></img></a></button>
+                            <button><a class="btn1" asp-controller="Login" asp-action="Index">@EXE.Resources.Resource.LogIn</a></button>
+                            <button><a class="btn2" asp-controller="Register" asp-action="Index">@EXE.Resources.Resource.Register</a></button>
+                        }
+                    }
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <main role="main" class="">
+            @RenderBody()
+        </main>
+    </div>
+    @if (ViewBag.HideFooter != true)
+    {
+        <footer class="border-top footer text-muted @ViewBag.FooterColor">
+        </footer>
+    }
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

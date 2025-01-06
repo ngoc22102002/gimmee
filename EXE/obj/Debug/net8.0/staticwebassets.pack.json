@@ -1,0 +1,417 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\EXE.bundle.scp.css",
+      "PackagePath": "staticwebassets\\EXE.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Abril_Fatface\\AbrilFatface-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Abril_Fatface\\AbrilFatface-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Abril_Fatface\\OFL.txt",
+      "PackagePath": "staticwebassets\\fonts\\Abril_Fatface\\OFL.txt"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\DM_Serif_Text\\DMSerifText-Italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\DM_Serif_Text\\DMSerifText-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\DM_Serif_Text\\DMSerifText-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\DM_Serif_Text\\DMSerifText-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\DM_Serif_Text\\OFL.txt",
+      "PackagePath": "staticwebassets\\fonts\\DM_Serif_Text\\OFL.txt"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-Black.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-BlackItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-BoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-ExtraLightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-ExtraLightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-Italic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-Light.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-LightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-MediumItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-Thin.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Kanit\\Kanit-ThinItalic.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Kanit\\Kanit-ThinItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Quicksand\\Quicksand-Bold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Quicksand\\Quicksand-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Quicksand\\Quicksand-Light.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Quicksand\\Quicksand-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Quicksand\\Quicksand-Medium.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Quicksand\\Quicksand-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Quicksand\\Quicksand-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Quicksand\\Quicksand-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\fonts\\Quicksand\\Quicksand-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\fonts\\Quicksand\\Quicksand-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\image\\Login.png",
+      "PackagePath": "staticwebassets\\image\\Login.png"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\image\\Logo.png",
+      "PackagePath": "staticwebassets\\image\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\image\\UM.png",
+      "PackagePath": "staticwebassets\\image\\UM.png"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\image\\VN.png",
+      "PackagePath": "staticwebassets\\image\\VN.png"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\image\\background.png",
+      "PackagePath": "staticwebassets\\image\\background.png"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\image\\cart.png",
+      "PackagePath": "staticwebassets\\image\\cart.png"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\image\\face.png",
+      "PackagePath": "staticwebassets\\image\\face.png"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\image\\ins.png",
+      "PackagePath": "staticwebassets\\image\\ins.png"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\js\\Demo3D.js",
+      "PackagePath": "staticwebassets\\js\\Demo3D.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\phamn\\Downloads\\EXE201_Gimme-master\\EXE201_Gimme-master\\EXE\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EXE.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EXE.props",
+      "PackagePath": "build\\EXE.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EXE.props",
+      "PackagePath": "buildMultiTargeting\\EXE.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EXE.props",
+      "PackagePath": "buildTransitive\\EXE.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

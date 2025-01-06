@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Login Page";
+}
+<form asp-controller="Login" method="post" asp-action="ChangePassword">
+    <div class="contentLogin container-fluid">
+        <div class="container containerForm backgroundLogin">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <img class="imgLogin" src="/image/Login.png" alt="Ảnh mẫu" />
+                </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="row loginForm">
+                        <div class="col-lg-2"></div>
+                        <div class="col-lg-8">
+                            <h1>Gimme Store</h1>
+                            @if (ViewBag.UserOTP != null)
+                            {
+                                <input name="otp" type="hidden" value="@ViewBag.UserOTP" />
+                            }
+                            <p class="pAccount">@EXE.Resources.Resource.NewPassword</p>
+                            <input name="password" type="password"/>
+                            <button type="submit" class="btnSubmit">@EXE.Resources.Resource.changePassword</button>
+                            <p class="createAccount">
+                                @EXE.Resources.Resource.Doyou? <a asp-action="Register" asp-controller="Login">@EXE.Resources.Resource.Register</a>
+                            </p>
+                            <p class="createAccount">
+                                <a asp-action="Index" asp-controller="Login">@EXE.Resources.Resource.LogIn</a>
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

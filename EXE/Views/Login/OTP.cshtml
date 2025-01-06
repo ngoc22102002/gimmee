@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "OTP Page";
+    var action = TempData["UserAction"] as string;
+}
+<div class="container">
+    <div style="margin-bottom: 500px;" class="row">
+        <div class="col-lg-3"></div>
+        <div class="row rowFormAddress col-lg-6">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <form id="OTPForm" class="formAddress" method="post">
+                    <h1>@EXE.Resources.Resource.OTPAuthen</h1>
+                    <p>@EXE.Resources.Resource.OTP</p>
+                    <input class="ipAddress" type="text" name="otp">
+                    <p style="color: red;">@EXE.Resources.Resource.MaOTP</p>
+                    <!-- Hidden fields to pass TempData values -->
+                    @if (action == "ChangePassword")
+                    {
+                        <input type="hidden" name="action" value="@action" />
+                    }
+                    else
+                    {
+                        <input type="hidden" name="username" value="@TempData["UserUsername"]" />
+                        <input type="hidden" name="password" value="@TempData["UserPassword"]" />
+                        <input type="hidden" name="gmail" value="@TempData["UserGmail"]" />
+                        <input type="hidden" name="action" value="@action" />
+                    }
+                    <div class="addressBtn">
+                        <button type="submit" class="btnAddress">@EXE.Resources.Resource.Confirm</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("OTPForm").addEventListener("submit", function (event) {
+        var form = event.target;
+        var field1Value = form.querySelector('[name="action"]').value;
+
+        if (field1Value === "Register") {
+            form.action = "/Register/OTP";
+        } else if (field1Value === "ChangeInformation") {
+            form.action = "/Information/OTP";
+        } else if (field1Value === "ChangePassword") {
+            form.action = "/ChangePassword/OTPChangePassword";
+    });
+</script>
